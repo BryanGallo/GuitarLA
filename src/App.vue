@@ -1,4 +1,13 @@
 <script setup>
+import { reactive, ref, onMounted } from "vue";
+import { db } from "./data/guitarras.js";
+
+const guitarras = ref();
+
+onMounted(() => {
+    console.log("Componente Listo");
+    guitarras.value = db;
+});
 </script>
 
 <template>
